@@ -8,9 +8,9 @@ fn main() {
         let inputs: Vec<String> = input.split_whitespace().map(str::to_string).collect();
         match inputs[0].as_str() {
             "add" => {
-                for v in inputs {
+                for i in 1..inputs.len() {
                     let todo = Todo {
-                        title: v,
+                        title: inputs[i].clone(),
                         is_completed: false,
                     };
                     todo_list.push(todo);
@@ -29,8 +29,4 @@ fn main() {
 struct Todo {
     title: String,
     is_completed: bool,
-}
-
-enum TODO_CASES {
-    
 }
