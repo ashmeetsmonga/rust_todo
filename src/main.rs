@@ -17,8 +17,8 @@ fn main() {
                 }
             },
             "list" => {
-                for todo in &todo_list {
-                    println!("{}", todo.title);
+                for i in 0..todo_list.len() {
+                    println!("{}: {}", i + 1, todo_list[i].title);
                 }
             },
             _ => println!("Match not found"),
